@@ -1,0 +1,2 @@
+class AkuController < ApplicationController
+end
