@@ -4,7 +4,7 @@ Rails.application.routes.draw do
 root "home#index"
 
 
-get "/populists" => "populists#index"
+# get "/populists" => "populists#index"
 
 resources :users
 resources :populists

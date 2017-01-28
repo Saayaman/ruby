@@ -1,0 +1,29 @@
+<!-- NAV FOOTER -->
+            <div id="nav-footer" class="col-xs-12">
+                <a href="index.html">
+                    <div id="home" class="col-xs-4 footer-button">
+                        <div class="footer-icon"></div>
+                        <p>Home</p>
+                    </div><!--home-->
+                </a>
+                    <div id="my-lists" class="col-xs-4 footer-button">
+                        <div class="footer-icon"></div>
+                        <p><%= link_to "My List", populists_path %></p>
+                    </div>
+                </a>
+                <a href="cart.html">
+                    <div id="cart" class="col-xs-4 footer-button">
+                        <div class="footer-icon"></div>
+                        <p>Cart</p>
+                    </div><!--home-->
+                </a>
+            </div><!--nav footer-->
+
+            <!--jquery and jquery ui-->
+            <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+            <script src="http://ajax.aspnetcdn.com/ajax/jquery.ui/1.11.4/jquery-ui.min.js"></script>
+            <!--bootstrap js-->
+            <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
+            <script>
+            $('.dropdown-toggle').dropdown()
+            </script>
