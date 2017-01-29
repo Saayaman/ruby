@@ -6,9 +6,14 @@
                 <p class="list_title">Your Lists</p>
                 <ul id="my-list-list">
                   <% @populists.each do |populist| %>
-                        <li><%= populist.title %>
+                        <li><%= link_to populist.title, populist_path(populist) %>
                           <div class="visibility-status">
-                          <span class="glyphicon glyphicon-eye-open eye" aria-hidden="true"></span>
+                            <% if populist.public == true %>
+                              <span class="glyphicon glyphicon-eye-open eye" aria-hidden="true"></span>
+                            <% else %>
+                            <span class="glyphicon glyphicon-eye-close eye" aria-hidden="true"></span>
+                          <%  end  %>
+
                           <%= link_to " ", populist, method: :delete, data: {confirm: "Are you sure?"}, :class => "glyphicon glyphicon-trash" %>
 
                         </div>

@@ -1,0 +1,11 @@
+<%= @populist.title %>
+<hr>
+<% @populist.todolists.each do |ayako|  %>
+<%= ayako.title %>
+<br>
+<% end %>
+<%= simple_form_for [@populist, @todolist] do |todo| %>
+<%= todo.input :title %>
+<%= todo.input :mark, as: :boolean, checked_value: true, unchecked_value: false %>
+<%= todo.submit %>
+<% end %>

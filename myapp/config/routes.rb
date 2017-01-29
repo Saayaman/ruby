@@ -7,7 +7,9 @@ root "home#index"
 # get "/populists" => "populists#index"
 
 resources :users
-resources :populists
+resources :populists do
+resources :todolists, only: [:create, :destroy]
+end
 # makes 7 ruby actions for you
 
 end

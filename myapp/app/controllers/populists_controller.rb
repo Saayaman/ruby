@@ -26,12 +26,14 @@ class PopulistsController < ApplicationController
     end
 
     def show
-      @populists = Populist.find(params[:id])
+      @populist = Populist.find(params[:id])
+      @todolist = Todolist.new
     end
+
 
     private
       def strong_params
-        params.require(:populist).permit(:title)
+        params.require(:populist).permit(:title, :public)
       end
 
 end

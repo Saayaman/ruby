@@ -1,6 +1,6 @@
 require 'test_helper'
 
-class PopulistControllerTest < ActionDispatch::IntegrationTest
+class TodolistTest < ActiveSupport::TestCase
   # test "the truth" do
   #   assert true
   # end

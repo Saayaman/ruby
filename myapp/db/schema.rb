@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170128052437) do
+ActiveRecord::Schema.define(version: 20170129062612) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -22,6 +22,15 @@ ActiveRecord::Schema.define(version: 20170128052437) do
     t.boolean  "public"
   end
 
+  create_table "todolists", force: :cascade do |t|
+    t.string   "title"
+    t.boolean  "mark"
+    t.datetime "created_at",  null: false
+    t.datetime "updated_at",  null: false
+    t.integer  "populist_id"
+    t.index ["populist_id"], name: "index_todolists_on_populist_id", using: :btree
+  end
+
   create_table "users", force: :cascade do |t|
     t.string   "email"
     t.string   "password_digest"
@@ -31,4 +40,5 @@ ActiveRecord::Schema.define(version: 20170128052437) do
     t.datetime "updated_at",      null: false
   end
 
+  add_foreign_key "todolists", "populists"
 end
