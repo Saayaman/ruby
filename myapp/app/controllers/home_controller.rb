@@ -6,7 +6,6 @@ def index
 end
 
 
-
 def show
   @populists = Populist.find(params[:id])
 end
