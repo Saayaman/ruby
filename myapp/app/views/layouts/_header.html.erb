@@ -14,6 +14,10 @@
                     </div><!--dropdown-->
                 </div><!--header left-->
                 <div id="header-right" class="col-xs-10">
-                    <input type="text" class="form-control" placeholder="Search Populists">
+                  <%= form_tag(populists_path, method: :get) do %>
+                  <%= text_field_tag :search%>
+                  <%= submit_tag 'Search' %>
+                  <% end %>
+                    <!-- <input type="text" class="form-control" placeholder="Search Populists"> -->
                 </div><!--header-right-->
             </div><!--header-->

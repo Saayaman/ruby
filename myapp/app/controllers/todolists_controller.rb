@@ -11,7 +11,6 @@ class TodolistsController < ApplicationController
   end
 
 
-
   private
   def strong_params
     params.require(:todolist).permit(:title, :mark)

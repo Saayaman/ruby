@@ -1,7 +1,11 @@
 class PopulistsController < ApplicationController
 
     def index
-      @populists = Populist.all
+      if params[:search]
+        @populists = Populist.matching_title(params[:search])
+      else
+        @populists = Populist.all
+      end
     end
 
     def create
