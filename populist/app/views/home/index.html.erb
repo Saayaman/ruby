@@ -1,0 +1,30 @@
+
+<div class="lists">
+  <div class="carousel-row row col-xs-12 col-md-10 col-md-offset-1">
+      <p class="heading">Your recent lists</p>
+          <div class="carousel">
+
+
+          <%  @todolists.each do |todolist| %>
+          <div class="trending-populist">
+                  <div class="featured-list-header col-xs-12">
+                      <p class="list-title"><%= todolist.title %></p>
+                  </div><!--featured list header-->
+                  <div class="col-xs-12 trending-recent-lists">
+                      <ol class="trending-populist-item">
+                        <% todolist.tasks.each do |task|  %>
+                          <li><%= task.title.first(18) %></li>
+                       <% end %>
+                      </ol>
+                  </div>
+                  <div class="col-xs-12" id="contributors">
+                      <i class="fa fa-eye-slash" aria-hidden="true"></i>
+                  </div>
+              </div><!--trending-populist-->
+        <% end  %>
+
+
+
+        </div><!--carousel -->
+  </div>
+</div>
